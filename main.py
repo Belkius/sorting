@@ -6,7 +6,7 @@ import time
 
 a = []
 l = 10
-d = True
+d = False
 
 
 def print_hi(name):
@@ -21,15 +21,14 @@ if __name__ == '__main__':
     start_time = time.time()
     print("--- %s seconds ---" % (time.time() - start_time))
     print(a)
-    algorithms.merge(a, l)
+    algorithms.shell(a, l)
     print(a)
     print("--- %s seconds ---" % (time.time() - start_time))
-"""
+""""
     start_time = time.time()
     print("--- %s seconds ---" % (time.time() - start_time))
     #print(a2)
     algorithms.merge2(a2, l)
     #print(a2)
     print("--- %s seconds ---" % (time.time() - start_time))
-
 """

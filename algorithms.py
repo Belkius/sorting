@@ -13,8 +13,8 @@ def selection(array, length):
 
 #array, length
 def bubble(array, length):
-    for i in range (0, length):
-        for j in range (0, length - i - 1):
+    for i in range(0, length):
+        for j in range(0, length - i - 1):
             if array[j] > array[j + 1]:
                 numbers.swap(array, j, j + 1)
 
@@ -52,7 +52,7 @@ def heapify(array, length, index):
 
 #array, length
 def heap(array, length):
-    for i in range(length//2, -1, -1):
+    for i in range(length // 2, -1, -1):
         heapify(array, length, i)
 
     for i in range(length - 1, 0, -1):
@@ -72,7 +72,7 @@ def insertion(array, length):
 #array, length
 def merge(array, length):
     if length > 1:
-        middle = length//2
+        middle = length // 2
         low = array[:middle]
         high = array[middle:]
 
@@ -99,7 +99,7 @@ def merge(array, length):
 
 def merge2(array, length):
     if length > 1:
-        middle = length//2
+        middle = length // 2
         low = array[:middle]
         high = array[middle:]
 
@@ -125,4 +125,17 @@ def merge2(array, length):
             high_count += 1
 
 
-#def shell():
+#array, length
+def shell(array, length):
+    sequence = length // 2
+    while sequence > 0:
+        for i in range(sequence, length):
+            key = array[i]
+            j = i
+            while j >= sequence and array[j - sequence] > key:
+                numbers.swap(array, j, j-sequence)
+                j -= sequence
+        sequence //= 2
+
+
+#def pancake
