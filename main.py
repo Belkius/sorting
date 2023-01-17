@@ -5,7 +5,7 @@ import time
 
 
 a = []
-l = 10
+l = 15
 d = False
 
 
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     start_time = time.time()
     print("--- %s seconds ---" % (time.time() - start_time))
     print(a)
-    algorithms.shell(a, l)
+    algorithms.pancake(a, l)
     print(a)
     print("--- %s seconds ---" % (time.time() - start_time))
 """"

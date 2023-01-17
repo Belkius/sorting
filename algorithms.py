@@ -138,4 +138,23 @@ def shell(array, length):
         sequence //= 2
 
 
-#def pancake
+def flip(array, index):
+    for i in range(0, index//2+1):
+        numbers.swap(array, i, index)
+        index -= 1
+
+
+def search_max(array, length):
+    max=0
+    for i in range(1, length):
+        if array[max] < array[i]:
+            max = i
+    return max
+
+
+def pancake(array, length):
+    for i in range(length, 1, -1):
+        max = search_max(array, i)
+        if max != i - 1:
+            flip(array, max)
+            flip(array, i - 1)
