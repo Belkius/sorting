@@ -4,6 +4,7 @@ import algorithms
 import time
 
 
+
 a = []
 l = 15
 d = False
