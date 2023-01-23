@@ -1,4 +1,4 @@
-import numbers
+import calculations
 
 
 #array, length
@@ -8,7 +8,7 @@ def selection(array, length):
         for j in range(0 + i, length):
             if array[minimum] > array[j]:
                 minimum = j
-        numbers.swap(array, i, minimum)
+        calculations.swap(array, i, minimum)
 
 
 #array, length
@@ -16,7 +16,7 @@ def bubble(array, length):
     for i in range(0, length):
         for j in range(0, length - i - 1):
             if array[j] > array[j + 1]:
-                numbers.swap(array, j, j + 1)
+                calculations.swap(array, j, j + 1)
 
 
 #array, 0, length - 1
@@ -27,8 +27,8 @@ def quick(array, low, high):
         for i in range(low, high):
             if array[i] <= pivot:
                 pointer = pointer + 1
-                numbers.swap(array, pointer, i)
-        numbers.swap(array, pointer + 1, high)
+                calculations.swap(array, pointer, i)
+        calculations.swap(array, pointer + 1, high)
 
         quick(array, low, pointer)
         quick(array, pointer + 2, high)
@@ -46,7 +46,7 @@ def heapify(array, length, index):
         largest = right
 
     if largest != index:
-        numbers.swap(array, index, largest)
+        calculations.swap(array, index, largest)
         heapify(array, length, largest)
 
 
@@ -56,7 +56,7 @@ def heap(array, length):
         heapify(array, length, i)
 
     for i in range(length - 1, 0, -1):
-        numbers.swap(array, 0, i)
+        calculations.swap(array, 0, i)
         heapify(array, i, 0)
 
 
@@ -66,7 +66,7 @@ def insertion(array, length):
         key = array[i]
         for j in range(i - 1, -1, -1):
             if key < array[j]:
-                numbers.swap(array, j + 1, j)
+                calculations.swap(array, j + 1, j)
 
 
 #array, length
@@ -133,14 +133,14 @@ def shell(array, length):
             key = array[i]
             j = i
             while j >= sequence and array[j - sequence] > key:
-                numbers.swap(array, j, j-sequence)
+                calculations.swap(array, j, j-sequence)
                 j -= sequence
         sequence //= 2
 
 
 def flip(array, index):
     for i in range(0, index//2+1):
-        numbers.swap(array, i, index)
+        calculations.swap(array, i, index)
         index -= 1
 
 

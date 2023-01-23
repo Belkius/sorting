@@ -1,5 +1,5 @@
 #! python3.
-import numbers
+import calculations
 import algorithms
 import time
 
@@ -15,7 +15,7 @@ def print_hi(name):
 
 if __name__ == '__main__':
     print_hi('Grzegorz')
-    numbers.generate(a, l, d)
+    calculations.generate(a, l, d)
     a2 = a.copy()
 
     start_time = time.time()
