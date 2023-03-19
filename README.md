@@ -1,4 +1,4 @@
-#Python sorting algorithms
+# Python sorting algorithms
 Implementation of 8 different sorting algorithms in Python:
 - Selection sort
 - Bubble sort
