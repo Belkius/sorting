@@ -8,6 +8,7 @@ Implementation of 8 different sorting algorithms in Python:
 - Merge sort
 - Shell sort
 - Pancake sort
+
 #Algorithm Descriptions
 ##Selection Sort
 Selection sort is a simple sorting algorithm that sorts an array by repeatedly finding the minimum element from the unsorted part of the array and putting it at the beginning. The algorithm maintains two subarrays: the sorted subarray, which is initially empty, and the unsorted subarray, which is initially the entire input array.
